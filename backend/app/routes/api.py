@@ -1,6 +1,8 @@
 from fastapi import APIRouter, HTTPException
 from ..controllers.user_controller import UserController
 from ..models.user import User
+from .study_plan import router as planner_router
+from .auth import router as login_router
 
 router = APIRouter()
 
@@ -18,3 +20,6 @@ def get_user(user_id: int):
 @router.post("/users", response_model=User)
 def create_user(user: User):
     return UserController.create_user(user) 
+
+router.include_router(planner_router)
+router.include_router(login_router)
