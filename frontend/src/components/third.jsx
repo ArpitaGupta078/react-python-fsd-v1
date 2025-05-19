@@ -11,28 +11,28 @@ const tips = [
       "Use fun pens, lovely notebooks, and adorable supplies. It doesn’t have to be expensive--just something that makes you excited to study.",
   },
   {
-    number: 3,
+    number: 2,
     emoji: "⏸",
     title: "Take breaks when you need them",
     description:
       "Rest is productive too! Recharge your energy so you can come back even stronger.",
   },
   {
-    number: 4,
+    number: 3,
     emoji: "🍰",
     title: "Build a consistent routine",
     description:
       "Create a study rhythm that works for you and stick with it. Consistency = progress.",
   },
   {
-    number: 5,
+    number: 4,
     emoji: "📝",
     title: "Set small daily goals or to-do lists",
     description:
       "Break tasks into bite-sized pieces. Don’t overload yourself—progress is still progress!",
   },
   {
-    number: 6,
+    number: 5,
     emoji: "📌",
     title: "Make a vision board",
     description:
