@@ -2,17 +2,12 @@ import React from "react";
 
 const StudyTips = () => {
   const tips = [
-    {
-      title: "Schedule Study Time",
-      icon: "📅",
-      description:
-        "Review your calendar and schedule time to study throughout the week. Schedule enough time to cover all classes. Stick to the schedule! If something urgent comes up, reschedule your study time.",
-    },
+   
     {
       title: "Use Subject Blocking",
       icon: "⏰",
       description:
-        "When scheduling your study time, block subjects into smaller blocks. Instead of studying one subject for 3 hours straight, do 3 different subjects for 1 hour each. This will help keep your mind engaged. Repeat throughout the week.",
+        "When scheduling your study time, block subjects into smaller blocks. Instead of studying one subject for 3 hours straight, do 3 different subjects for 1 hour each. This will help keep your mind engaged. ",
     },
     {
       title: "Switch It Up",
@@ -37,7 +32,7 @@ const StudyTips = () => {
   return (
     <div className="study-tips-wrapper">
       <div className="container py-5">
-        <h2 className="text-center mb-4 section-title">
+        <h2 className="text-center n11 section-title">
           <span className="header-top">LIVE, LOVE & LEARN</span>
           <br />
           STUDY TIPS

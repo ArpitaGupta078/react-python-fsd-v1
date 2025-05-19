@@ -1,19 +1,5 @@
 const API_URL =  'http://localhost:3001/api';
 
-// export const checkBackendStatus = async () => {
-//     try {
-//         const response = await fetch(`${API_URL}/`);
-//         const data = await response.json();
-//         return data;
-//     } catch (error) {
-//         console.error('Error checking backend status:', error);
-//         throw error;
-//     }
-// }; 
-
-
-// services/api.js
-// const API_BASE_URL = 'http://localhost:8000'; // Update this if needed
 
 export const login = async (email, password) => {
   const response = await fetch(`${API_URL}/login`, {
@@ -32,3 +18,25 @@ export const login = async (email, password) => {
 
   return data;
 };
+
+
+
+
+export const createStudyPlan = async (userId, data) => {
+  const response = await fetch(`${API_URL}/users/${userId}/study-plan`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+
+  const result = await response.json();
+
+  if (!response.ok) {
+    throw new Error(result.detail || 'Failed to create study plan');
+  }
+
+  return result;
+};
+

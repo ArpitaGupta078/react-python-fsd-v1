@@ -8,6 +8,15 @@
   font-family: 'Brush Script MT', cursive;
 }
 
+.mediaframe {
+  gap: 3rem; /* default gap */
+}
+
+@media (max-width: 991px) {
+  .mediaframe {
+    gap: 0.5rem;
+  }
+}
 
 
 .content {
@@ -607,4 +616,31 @@ body {
   background-color: #d6c9d8;
   color: #333;
   padding: 40px 0;
+}
+
+.n11{
+  margin-bottom: 3rem !important;
+}
+.study-box {
+  background-color: #ffe6f0; /* Light pink background */
+  border: 2px dashed #ff99c8; /* Soft pink border */
+  border-radius: 15px;
+  padding: 25px;
+  max-width: 600px;
+  transition: all 0.3s ease-in-out;
+}
+
+.study-box:hover {
+  box-shadow: 0 8px 20px rgba(255, 153, 200, 0.4); /* Pink glow */
+  transform: scale(1.02);
+}
+
+.study-text {
+  font-family: 'Comic Sans MS', 'Segoe UI', cursive;
+  font-size: 1.25rem;
+  color: #d63384; /* Vibrant pink text */
+  line-height: 1.6;
+}
+.m11{
+  margin-bottom: 2rem;
 }

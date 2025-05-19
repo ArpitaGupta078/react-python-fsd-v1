@@ -1,30 +1,25 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-<<<<<<< HEAD
-import { login } from '../services/api'; // Adjust the path if needed
-=======
-import { Link, NavLink } from "react-router-dom";
-
->>>>>>> 816cc484492b5fa6d0265411dbd0e290fa8489b4
+import { login } from '../services/api';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  
-  console.log(email);
-  
+
+  const navigate = useNavigate();
+
   const handleLogin = async (e) => {
     e.preventDefault();
     setError('');
 
     try {
       const result = await login(email, password);
-      alert(`Logged in successfully: ${result.message}`);
-      // Optionally store token or user data
-      // localStorage.setItem('token', result.data.token);
+      window.alert(`🎉 Login successful: ${result.message}`);
+      navigate('/');
     } catch (err) {
-      setError(err.message);
+      setError(err.message || 'Login failed');
     }
   };
 
@@ -50,7 +45,7 @@ const Login = () => {
             required
           />
           {error && <div className="alert alert-danger">{error}</div>}
-          <button type="submit" className="btn custom-btn w-100">
+          <button type="submit" className="btn custom-btn btn-primary w-100">
             Log In 💖
           </button>
         </form>

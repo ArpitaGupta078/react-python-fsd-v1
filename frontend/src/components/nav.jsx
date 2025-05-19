@@ -24,7 +24,7 @@ const Nav = () => {
         {/* Collapsible Content */}
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           {/* Centered Nav Links */}
-          <ul className="navbar-nav mx-auto mb-2 mb-lg-0 gap-5">
+          <ul className="navbar-nav mx-auto mb-2 mb-lg-0 mediaframe">
             <li className="nav-item">
               <NavLink to="/" className="nav-link" end>Home</NavLink>
             </li>
