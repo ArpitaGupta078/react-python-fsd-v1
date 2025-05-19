@@ -17,7 +17,12 @@
     gap: 0.5rem;
   }
 }
-
+.btn-primary{
+ --bs-btn-hover-bg:#d63384;
+    --bs-btn-hover-border-color: #d63384;
+    --bs-btn-active-bg: #d63384;
+--bs-btn-active-border-color: #e4d7e4;
+}
 
 .content {
   text-align: center;
