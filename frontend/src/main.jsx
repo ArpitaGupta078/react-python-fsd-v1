@@ -12,6 +12,7 @@ import StudyPlanner from './components/sp.jsx';
 import Login from './components/login.jsx';
 import Signup from './components/signup.jsx';
 import First from './components/router/first.jsx'; // ✅ Import added
+import AboutUs from './components/about.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
       { path: "/sign-up", element: <Signup /> },
       { path: "/studyPlanner", element: <StudyPlanner /> },
       { path: "/schedule", element: <Schedule /> },
+      { path: "/about-us", element: <AboutUs /> },
      
     ],
   },

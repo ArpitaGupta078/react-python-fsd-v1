@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link, NavLink } from "react-router-dom";
 
 
 const Login = () => {
@@ -37,7 +38,7 @@ const Login = () => {
           </button>
         </form>
         <p className="text-center mt-3 login-footer">
-          Don’t have an account? <a href="/sign-up">Sign up</a>
+          Don’t have an account? <NavLink to="/sign-up">Sign up</NavLink>
         </p>
       </div>
     </div>
