@@ -1,6 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import { Link, NavLink } from "react-router-dom";
+
 
 const Signup = () => {
   return (
@@ -20,7 +22,7 @@ const Signup = () => {
       <button type="submit" className="btn btn-primary w-100 login-button">Sign Up 🌟</button>
     </form>
     <p className="text-center mt-3">
-      Already have an account? <a href="/log-in" className="text-pink">Log in</a>
+      Already have an account? <NavLink to="/log-in" className="text-pink">Log in</NavLink>
     </p>
   </div>
 </div>
