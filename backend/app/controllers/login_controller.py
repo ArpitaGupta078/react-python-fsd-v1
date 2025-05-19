@@ -11,5 +11,6 @@ class LoginController:
         if not user:
             raise HTTPException(status_code=401, detail="Invalid email or password")
         
-        user_obj = User(id=user["id"], name=user["name"], email=user["email"])
-        return ApiResponse.create(200, user_obj.dict(), "Login successful")
+        user_obj = User(id=user["id"], name=user["name"], email=user["email"], password=user.get("password"))
+        return ApiResponse.create(200, user_obj.dict(exclude={"password"}), "Login successful")
+

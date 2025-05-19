@@ -1,14 +1,26 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { login } from '../services/api'; // Adjust the path if needed
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
-  const handleLogin = (e) => {
+  const [error, setError] = useState('');
+  
+  console.log(email);
+  
+  const handleLogin = async (e) => {
     e.preventDefault();
-    alert(`Logged in as: ${email}`);
+    setError('');
+
+    try {
+      const result = await login(email, password);
+      alert(`Logged in successfully: ${result.message}`);
+      // Optionally store token or user data
+      // localStorage.setItem('token', result.data.token);
+    } catch (err) {
+      setError(err.message);
+    }
   };
 
   return (
@@ -32,6 +44,7 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
+          {error && <div className="alert alert-danger">{error}</div>}
           <button type="submit" className="btn custom-btn w-100">
             Log In 💖
           </button>

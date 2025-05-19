@@ -16,10 +16,10 @@ app = FastAPI(
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins
+    allow_origins=["*"],  # Or ["*"] to allow all origins (not recommended in production)
     allow_credentials=True,
-    allow_methods=["*"],  # Allows all methods
-    allow_headers=["*"],  # Allows all headers
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Add logging middleware
@@ -27,6 +27,7 @@ app.add_middleware(LoggingMiddleware)
 
 # Include routes
 app.include_router(router, prefix="/api")
+
 
 
 @app.get("/")

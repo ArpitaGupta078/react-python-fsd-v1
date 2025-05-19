@@ -15,6 +15,7 @@ class LoginRequest(BaseModel):
 
 @router.post("/login", response_model=ApiResponse)
 def login(login_request: LoginRequest):
+    print("Received LoginRequest:", login_request)
     return LoginController.login(login_request.email, login_request.password)
 
 
